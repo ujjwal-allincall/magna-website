@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Magna Healthcare & Research Centre (A Unit of Bhaskar Foundation) - Comprehensive healthcare services in Lucknow">
+    <title>{% block title %}Magna Healthcare Private Limited (A Unit of Bhaskar Foundation){% endblock %}</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="header-top">
+                <div class="logo">
+                    <a href="/"><img src="{% static 'images/magna.svg' %}" alt="Magna Healthcare Logo" class="logo-img"></a>    
+                    <div class="logo-text">
+                        <h1><a href="/" style="text-decoration: none; color: inherit;">Magna Healthcare Private Limited</a></h1>
+                        <p class="subtitle"><a href="/" style="text-decoration: none; color: inherit;">A Unit of Bhaskar Foundation</a></p>
+                    </div>
+                </div>
+                <div class="header-contact">
+                    <div class="contact-item">
+                        <i class="fa-brands fa-whatsapp"></i>
+                        <span><a style="text-decoration: none; color: inherit;" href="https://wa.me/917317000703">+91 7317000703</a></span>
+                        <i class="fas fa-phone"></i>
+                        <span>+91 8765555595</span>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-envelope"></i>
+                        <span>support@magnahc.org</span>
+                    </div>
+                </div>
+            </div>
+            <nav class="navbar">
+                <ul class="nav-menu">
+                    <li><a href="{% url 'home' %}" class="{% if request.resolver_match.url_name == 'home' %}active{% endif %}">Home</a></li>
+                    <li><a href="{% url 'about' %}" class="{% if request.resolver_match.url_name == 'about' %}active{% endif %}">About Us</a></li>
+                    <li><a href="{% url 'services' %}" class="{% if request.resolver_match.url_name == 'services' %}active{% endif %}">Services</a></li>
+                    <li><a href="{% url 'contact' %}" class="{% if request.resolver_match.url_name == 'contact' %}active{% endif %}">Contact Us</a></li>
+                </ul>
+                <div class="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+        {% block content %}{% endblock %}
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <img src="{% static 'images/magna.svg' %}" alt="Magna Healthcare Logo" class="footer-logo">
+                    <h3>Magna Healthcare Private Limited</h3>
+                    <p class="footer-subtitle">A Unit of Bhaskar Foundation</p>
+                    <p>Magna Healthcare & Research Centre is a hospital opened by Dr. Ravi Bhaskar, providing comprehensive healthcare services with a focus on pulmonology and respiratory care.</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="{% url 'home' %}">Home</a></li>
+                        <li><a href="{% url 'about' %}">About Us</a></li>
+                        <li><a href="{% url 'services' %}">Services</a></li>
+                        <li><a href="{% url 'contact' %}">Contact Us</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Services</h4>
+                    <ul>
+                        <li>Consultation</li>
+                        <li>Pulmonology</li>
+                        <li>Sleep Disorders</li>
+                        <li>Lung Function Test</li>
+                        <li>Bronchoscopy</li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Contact Information</h4>
+                    <div class="footer-contact">
+                        <p><i class="fas fa-map-marker-alt"></i> Srilal Shukl Marg, Rajya Sampatti Awasiya Colony, 20/25, Indira Nagar, Lucknow, Uttar Pradesh 226016</p>
+                        <p><i class="fas fa-phone"></i> +91 7317000701, +91 8765555595</p>
+                        <p><i class="fas fa-envelope"></i> support@magnahc.org</p>
+                    </div>
+                    <div class="opening-hours">
+                        <h5>Opening Hours</h5>
+                        <p>Monday - Friday: 10:00 AM - 01:00 PM, 04:30 PM - 08:00 PM</p>
+                        <p>Saturday: Closed</p>
+                        <p>Sunday: 04:30 PM - 08:00 PM</p>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Magna Healthcare Private Limited (A Unit of Bhaskar Foundation). All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="{% static 'js/main.js' %}"></script>
+    {% block extra_js %}{% endblock %}
+</body>
+</html>
+
+

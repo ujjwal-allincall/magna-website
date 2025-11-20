@@ -1,0 +1,348 @@
+{% extends 'website/base.html' %}
+{% load static %}
+
+{% block title %}Home - Magna Healthcare Private Limited (A Unit of Bhaskar Foundation){% endblock %}
+
+{% block content %}
+<!-- Hero Section with Carousel -->
+<section class="hero">
+    <div class="carousel-container">
+        <div class="carousel-slide active">
+            <div class="carousel-content">
+                <h2>Welcome to Magna Healthcare & Research Centre</h2>
+                <p>Comprehensive Healthcare Services with Excellence in Pulmonology</p>
+                <a href="{% url 'contact' %}" class="btn btn-primary">Book Appointment</a>
+            </div>
+            <div class="carousel-image" style="background-image: url('{% static 'images/slider-1.jpg' %}');"></div>
+        </div>
+        <div class="carousel-slide">
+            <div class="carousel-content">
+                <h2>Expert Pulmonology Care</h2>
+                <p>Advanced diagnostic and therapeutic techniques for lung disorders</p>
+                <a href="{% url 'services' %}" class="btn btn-primary">Our Services</a>
+            </div>
+            <div class="carousel-image" style="background-image: url('{% static 'images/slider-2.jpeg' %}');"></div>
+        </div>
+        <div class="carousel-slide">
+            <div class="carousel-content">
+                <h2>State-of-the-Art Facilities</h2>
+                <p>Modern equipment and experienced medical professionals</p>
+                <a href="{% url 'about' %}" class="btn btn-primary">Learn More</a>
+            </div>
+            <div class="carousel-image" style="background-image: url('{% static 'images/slider-3.jpg' %}');"></div>
+        </div>
+        <div class="carousel-slide">
+            <div class="carousel-content">
+                <h2>Comprehensive Respiratory Care</h2>
+                <p>Expert treatment for all respiratory and lung-related conditions</p>
+                <a href="{% url 'services' %}" class="btn btn-primary">View Services</a>
+            </div>
+            <div class="carousel-image" style="background-image: url('{% static 'images/slider-4.jpg' %}');"></div>
+        </div>
+        <div class="carousel-slide">
+            <div class="carousel-content">
+                <h2>Advanced Medical Technology</h2>
+                <p>Cutting-edge diagnostic and treatment facilities</p>
+                <a href="{% url 'about' %}" class="btn btn-primary">About Us</a>
+            </div>
+            <div class="carousel-image" style="background-image: url('{% static 'images/slider-5.jpg' %}');"></div>
+        </div>
+        <button class="carousel-btn prev" onclick="changeSlide(-1)">&#10094;</button>
+        <button class="carousel-btn next" onclick="changeSlide(1)">&#10095;</button>
+        <div class="carousel-dots">
+            <span class="dot active" onclick="currentSlide(1)"></span>
+            <span class="dot" onclick="currentSlide(2)"></span>
+            <span class="dot" onclick="currentSlide(3)"></span>
+            <span class="dot" onclick="currentSlide(4)"></span>
+            <span class="dot" onclick="currentSlide(5)"></span>
+        </div>
+    </div>
+</section>
+
+<!-- Welcome Section -->
+<section class="welcome-section">
+    <div class="container">
+        <div class="welcome-content">
+            <h2>Welcome to <strong>Magna Healthcare & Research Centre</strong></h2>
+            <p class="subtitle">A Unit of Bhaskar Foundation</p>
+            <p>Magna Healthcare & Research Centre is a hospital opened by <strong>Dr. Ravi Bhaskar</strong>, providing comprehensive care to patients suffering from lung-related diseases. We are dedicated to offering the best treatment for respiratory conditions in Lucknow.</p>
+            <p>Our center is engaged in research programs in the field of pulmonology and conducts regular lung awareness talks and seminars. We provide excellent consultation for individuals of all age groups with a focus on advanced diagnostic and therapeutic techniques.</p>
+            <a href="{% url 'about' %}" class="btn btn-secondary">Read More</a>
+        </div>
+    </div>
+</section>
+
+<!-- Services Overview -->
+<section class="services-overview">
+    <div class="container">
+        <h2 class="section-title">Our Services</h2>
+        <div class="services-grid">
+            <div class="service-card">
+                <div class="service-icon">
+                    <i class="fas fa-stethoscope"></i>
+                </div>
+                <h3>Consultation</h3>
+                <p>Expert consultation for all respiratory and lung-related conditions for patients of all age groups.</p>
+                <a href="{% url 'services' %}" class="service-link">Learn More <i class="fas fa-arrow-right"></i></a>
+            </div>
+            <div class="service-card">
+                <div class="service-icon">
+                    <i class="fas fa-lungs"></i>
+                </div>
+                <h3>Pulmonology</h3>
+                <p>Comprehensive treatment for lung disorders, asthma, COPD, and other respiratory diseases.</p>
+                <a href="{% url 'services' %}" class="service-link">Learn More <i class="fas fa-arrow-right"></i></a>
+            </div>
+            <div class="service-card">
+                <div class="service-icon">
+                    <i class="fas fa-bed"></i>
+                </div>
+                <h3>Sleep Disorders</h3>
+                <p>Diagnosis and treatment of sleep apnea and other sleep-related breathing disorders.</p>
+                <a href="{% url 'services' %}" class="service-link">Learn More <i class="fas fa-arrow-right"></i></a>
+            </div>
+            <div class="service-card">
+                <div class="service-icon">
+                    <i class="fas fa-vial"></i>
+                </div>
+                <h3>Lung Function Test</h3>
+                <p>Advanced pulmonary function testing to assess lung capacity and respiratory health.</p>
+                <a href="{% url 'services' %}" class="service-link">Learn More <i class="fas fa-arrow-right"></i></a>
+            </div>
+            <div class="service-card">
+                <div class="service-icon">
+                    <i class="fas fa-procedures"></i>
+                </div>
+                <h3>Bronchoscopy</h3>
+                <p>Minimally invasive diagnostic and therapeutic procedures for airway examination.</p>
+                <a href="{% url 'services' %}" class="service-link">Learn More <i class="fas fa-arrow-right"></i></a>
+            </div>
+            <div class="service-card">
+                <div class="service-icon">
+                    <i class="fas fa-allergies"></i>
+                </div>
+                <h3>Allergy Testing</h3>
+                <p>Comprehensive allergy testing and treatment for respiratory allergies.</p>
+                <a href="{% url 'services' %}" class="service-link">Learn More <i class="fas fa-arrow-right"></i></a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- About Doctor Section -->
+<section class="about-doctor">
+    <div class="container">
+        <div class="doctor-content">
+            <div class="doctor-text">
+                <h2>About Dr. Ravi Bhaskar</h2>
+                <p>Dr. Ravi Bhaskar is one of the top Interventional Pulmonologists in India, recognized for his revolutionary work in the Pulmonary Medicine domain. He emphasizes the use of advanced diagnostic and therapeutic techniques for patients with lung airway disorders and pleural diseases.</p>
+                <p>Dr. Ravi Bhaskar, the visionary behind Magna Healthcare & Research Centre, is known as one of the most renowned pulmonologists in Lucknow for his great experience and expertise in Pulmonology care and critical care.</p>
+                <a href="{% url 'about' %}" class="btn btn-primary">Know More</a>
+            </div>
+            <div class="doctor-image">
+                <div class="placeholder-image">
+                    <i class="fas fa-user-md"></i>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Statistics Section -->
+<section class="statistics">
+    <div class="container">
+        <div class="stats-grid">
+            <div class="stat-item">
+                <div class="stat-number">1000+</div>
+                <div class="stat-label">Patients a year</div>
+            </div>
+            <div class="stat-item">
+                <div class="stat-number">50+</div>
+                <div class="stat-label">People working</div>
+            </div>
+            <div class="stat-item">
+                <div class="stat-number">15+</div>
+                <div class="stat-label">Years of experience</div>
+            </div>
+            <div class="stat-item">
+                <div class="stat-number">98%</div>
+                <div class="stat-label">Happy smiles</div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Photo Gallery Section -->
+<section class="photo-gallery">
+    <div class="container">
+        <h2 class="section-title">Photo Gallery</h2>
+        <p class="gallery-intro">Take a look at our state-of-the-art facilities and infrastructure</p>
+        <div class="gallery-grid">
+            <div class="gallery-item">
+                <img src="{% static 'images/photo-gallery-1.jpg' %}" alt="Magna Healthcare Gallery Image 1">
+                <div class="gallery-overlay">
+                    <i class="fas fa-search-plus"></i>
+                </div>
+            </div>
+            <div class="gallery-item">
+                <img src="{% static 'images/photo-gallery-2.jpg' %}" alt="Magna Healthcare Gallery Image 2">
+                <div class="gallery-overlay">
+                    <i class="fas fa-search-plus"></i>
+                </div>
+            </div>
+            <div class="gallery-item">
+                <img src="{% static 'images/photo-gallery-3.jpg' %}" alt="Magna Healthcare Gallery Image 3">
+                <div class="gallery-overlay">
+                    <i class="fas fa-search-plus"></i>
+                </div>
+            </div>
+            <div class="gallery-item">
+                <img src="{% static 'images/photo-gallery-4.jpg' %}" alt="Magna Healthcare Gallery Image 4">
+                <div class="gallery-overlay">
+                    <i class="fas fa-search-plus"></i>
+                </div>
+            </div>
+            <div class="gallery-item">
+                <img src="{% static 'images/photo-gallery-5.jpg' %}" alt="Magna Healthcare Gallery Image 5">
+                <div class="gallery-overlay">
+                    <i class="fas fa-search-plus"></i>
+                </div>
+            </div>
+            <div class="gallery-item">
+                <img src="{% static 'images/photo-gallery-6.jpg' %}" alt="Magna Healthcare Gallery Image 6">
+                <div class="gallery-overlay">
+                    <i class="fas fa-search-plus"></i>
+                </div>
+            </div>
+            <div class="gallery-item">
+                <img src="{% static 'images/photo-gallery-7.jpg' %}" alt="Magna Healthcare Gallery Image 7">
+                <div class="gallery-overlay">
+                    <i class="fas fa-search-plus"></i>
+                </div>
+            </div>
+            <div class="gallery-item">
+                <img src="{% static 'images/photo-gallery-8.jpg' %}" alt="Magna Healthcare Gallery Image 8">
+                <div class="gallery-overlay">
+                    <i class="fas fa-search-plus"></i>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Testimonials Section -->
+<section class="testimonials">
+    <div class="container">
+        <h2 class="section-title">What Our Patients Say</h2>
+        <div class="testimonials-grid">
+            <div class="testimonial-card">
+                <div class="testimonial-content">
+                    <i class="fas fa-quote-left"></i>
+                    <p>Much Experienced and Best Chest Specialist Doctor in Lucknow. Who Famous for Amazing Diagnosis and Very Efficacious Treatment.</p>
+                </div>
+                <div class="testimonial-author">
+                    <strong>Hari Om</strong>
+                </div>
+            </div>
+            <div class="testimonial-card">
+                <div class="testimonial-content">
+                    <i class="fas fa-quote-left"></i>
+                    <p>Consulting Dr. Bhaskar since long for my mother. Good experience till now. Hoping good cure for my mother and best wishes for the doctor.</p>
+                </div>
+                <div class="testimonial-author">
+                    <strong>Ranvir Raj</strong>
+                </div>
+            </div>
+            <div class="testimonial-card">
+                <div class="testimonial-content">
+                    <i class="fas fa-quote-left"></i>
+                    <p>Dr Ravi Bhaskar is not only a great doctor but also an amazing human being. His diagnosis is perfect and they give very limited and required medication to the patients.</p>
+                </div>
+                <div class="testimonial-author">
+                    <strong>Gaurav Diwedi</strong>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}
+
+{% block extra_js %}
+<script>
+    let currentSlideIndex = 0;
+    const slides = document.querySelectorAll('.carousel-slide');
+    const dots = document.querySelectorAll('.dot');
+
+    function showSlide(index) {
+        if (slides.length === 0) return;
+        
+        if (index >= slides.length) currentSlideIndex = 0;
+        if (index < 0) currentSlideIndex = slides.length - 1;
+        
+        slides.forEach(slide => slide.classList.remove('active'));
+        dots.forEach(dot => dot.classList.remove('active'));
+        
+        if (slides[currentSlideIndex]) {
+            slides[currentSlideIndex].classList.add('active');
+        }
+        if (dots[currentSlideIndex]) {
+            dots[currentSlideIndex].classList.add('active');
+        }
+    }
+
+    function changeSlide(n) {
+        currentSlideIndex += n;
+        showSlide(currentSlideIndex);
+    }
+
+    function currentSlide(n) {
+        currentSlideIndex = n - 1;
+        showSlide(currentSlideIndex);
+    }
+
+    // Auto-play carousel
+    if (slides.length > 0) {
+        setInterval(() => {
+            changeSlide(1);
+        }, 5000);
+    }
+
+    // Photo Gallery Lightbox
+    const galleryItems = document.querySelectorAll('.gallery-item');
+    galleryItems.forEach(item => {
+        item.addEventListener('click', function() {
+            const img = this.querySelector('img');
+            const imgSrc = img.src;
+            const imgAlt = img.alt;
+            
+            // Create lightbox
+            const lightbox = document.createElement('div');
+            lightbox.className = 'lightbox';
+            lightbox.innerHTML = `
+                <div class="lightbox-content">
+                    <span class="lightbox-close">&times;</span>
+                    <img src="${imgSrc}" alt="${imgAlt}">
+                </div>
+            `;
+            document.body.appendChild(lightbox);
+            document.body.style.overflow = 'hidden';
+            
+            // Close lightbox
+            const closeBtn = lightbox.querySelector('.lightbox-close');
+            const closeLightbox = () => {
+                document.body.removeChild(lightbox);
+                document.body.style.overflow = '';
+            };
+            
+            closeBtn.addEventListener('click', closeLightbox);
+            lightbox.addEventListener('click', function(e) {
+                if (e.target === lightbox) {
+                    closeLightbox();
+                }
+            });
+        });
+    });
+</script>
+{% endblock %}
+
+
