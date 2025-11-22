@@ -11,3 +11,9 @@ def services(request):
 
 def contact(request):
     return render(request, 'website/contact.html')
+
+def terms(request):
+    return render(request, 'website/terms.html')
+
+def privacy(request):
+    return render(request, 'website/privacy.html')
